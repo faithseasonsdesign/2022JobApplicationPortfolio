@@ -1,0 +1,279 @@
+*{
+    font-family: Arial;
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    list-style-type: none;
+    color:white;
+}
+
+/*navigation bar start*/
+#navigation-wrapper{background-color:black;}
+#navigation-content{
+    max-width:1200px;
+    padding:20px;
+    margin:0px auto;
+    height:100px;
+    display: flex;
+    align-items: center;
+}
+a{color:white;font-size:15pt}
+#logo-wrapper{
+    display: flex;
+    flex:1;
+}
+#nav-list-items-wrapper , .nav-item{
+    float:left;
+    margin-right:20px;
+}
+.logo{height:180px;}
+/*navigation bar ended*/
+
+/*hero section start*/
+#hero-section-wrapper{
+    height:70vh;
+    background:url("../images/4.jpg");
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+}
+#hero-section-mask{
+    height:70vh;
+    background-color:rgb(14 6 6 / 98%);
+    background-size:100% 100%;
+    display: flex;
+    align-items: center;
+}
+#hero-section-content{
+    max-width:1200px;
+    padding:50px 20px 50px 20px;
+    margin:0px auto;
+    background-size:100% 100%;
+}
+
+#hero-section-subcaption{color:lightgrey}
+#hero-section-btn-wrapper{margin-top:20px;}
+#hero-section-btn{
+    background: rgb(193 54 54 / 91%);
+    padding:15px;
+    border-radius: 30px;
+    color:white;
+    font-weight:bolder;
+}
+/*hero section ended*/
+
+/*skills section start*/
+#skill-wrapper{
+    max-width:1200px;
+    margin:0px auto;
+    padding:20px;
+    padding-top:50px;
+}
+#skill-caption{
+    color:black;
+    font-size:30pt;
+}
+#profile-img{
+    width:100%;
+}
+#row{
+    display:grid;
+    grid-template-columns:1fr 3fr;
+    margin-top:50px;
+    column-gap:20px;
+}
+button{
+    background-color:black;
+    padding:10px;
+    border:solid 2px black;
+}
+#skill-description{
+    color:black;
+    margin-top:10px;
+    font-size:20pt;
+}
+p{
+    color:black;
+    margin-top:10px;
+}
+/*skills section ended*/
+
+/*projects coding start here*/
+#project-wrapper{
+    max-width:1200px;
+    margin:0px auto;
+    padding:20px;
+}
+#project-caption{
+    color:black;
+    font-size:30pt;
+}
+#project-1-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    column-gap:20px;
+    row-gap:10px;
+}
+#quiz-app-caption{
+    color:black;
+    margin-top:30px;
+}
+#view-quiz-btn{
+    background-color:#F44336;
+    border:solid 10px #F44336;
+    margin-top:30px;
+}
+#project-description{
+    color:black;
+    font-size:12pt;
+    margin-top:40px;
+    line-height:25px;
+}
+/*projects coding ended here*/
+
+/*media queries start*/
+@media screen and (min-width:769px){
+    /*navigation start*/
+    #sm-nav-list-wrapper{display:none}
+    #nav-button-wrapper{display: none;}
+    /*navigation ended*/
+
+    /*hero section start*/
+    #hero-section-wrapper,#hero-section-mask{height:80vh}
+    #hero-section-caption{font-size:32pt;margin-top:10px}
+    #hero-section-subcaption{font-size:18pt;}
+    #hero-section-wrapper{
+        height:80vh;
+        background:url("../images/bg1.jpg");
+        background-size: 100% 100%;
+        background-repeat:no-repeat;
+    }
+    #hero-section-mask{
+        height:80vh;
+        background-color:rgb(14 6 6 / 97%);
+        background-size:100% 100%;
+        display: flex;
+        align-items: center;
+    }
+    /*hero section ended*/
+
+    /*skills section start*/
+    button{
+        margin-top:10px;
+    }
+    p{
+        color:black;
+        margin-top:10px;
+        font-size:14pt;
+    }
+    /*skills section ended*/
+
+    /*project coding start */
+    #quiz-img{
+        height:350px;
+    }
+    /*project coding ended */
+}
+@media screen and (max-width:768px){
+    *{text-align:center}
+    /*navigation start*/
+    li{font-size:15pt}
+    .fa-bars{font-size:22pt !important;}
+    #nav-list-items-wrapper{display: none;}
+    #sm-nav-list-wrapper,#sm-nav-list{
+        background-color:rgb(193 54 54 / 91%);
+        position:absolute;
+        left:0;
+        right:0;
+        height:100%;
+        display: none;
+    }
+    #sm-nav-list-wrapper{top:140px}
+    #sm-nav-list{
+        display: flex;
+        flex-direction: column;
+        row-gap:20px;
+        align-items:center;
+        justify-content:center;
+    }
+    .fa-bars{color:white}
+    /*navigation ended*/
+
+    /*hero section start*/
+    #hero-section-wrapper,#hero-section-mask{height:65vh}
+    #hero-section-content{
+        display: flex;
+        flex-direction: column;
+        word-wrap: break-word;
+    }
+    #hero-section-caption{margin-top:15px}
+    #hero-section-subcaption{margin-top:10px}
+    /*hero section ended*/
+
+    /*skill section start*/
+    #row{
+        display:flex;
+        flex-direction:column;
+        row-gap:10px;
+    }
+    #skills-wrapper{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        column-gap:2px;
+        row-gap:2px;
+    }
+    button{margin-top:0px}
+    /*slill section ended*/
+
+    /*project section started*/
+    #project-1-wrapper{
+        display:grid;
+        grid-template-columns:1fr;
+        row-gap:30px;
+    }
+    #quiz-img{
+        width:100%;
+    }
+    #skills-wrapper{
+        margin-top:10px;
+    }
+    #quiz-app-caption{
+        margin-top:10px;
+    }
+    /*project section ended*/
+}
+@media screen and (max-width:250px){
+    /*navigation start*/
+    li{font-size:13pt}
+    #navigation-content{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        text-align:center;
+        padding:50px 0px 100px 0px;
+    }
+    .logo{width:100%;height:150px}
+    /*navigation ended*/
+
+    /*hero section start*/
+    #hero-section-caption{font-size:18pt}
+    #hero-section-btn{
+        font-size:8pt;
+        text-align: center;
+    }
+    /*hero section ended*/
+}
+@media screen and (max-width:200px){
+    /*hero section start*/
+    #hero-section-caption{font-size:13pt}
+    #hero-section-btn{
+        font-size:6pt;
+        text-align: center;
+    }
+    #hero-section-wrapper{
+        text-align:center;
+        background-size: contain 100%;
+    }
+    #hero-section-subcaption{font-size:8pt}
+    /*hero section ended*/
+}
+/*media queries ended*/
